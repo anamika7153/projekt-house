@@ -1,13 +1,4 @@
 
-
-
-
-
-
-
-
-
-
 import React, { useState,useRef, useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import M from "materialize-css";
@@ -21,14 +12,9 @@ function Login() {
 const emailRef = useRef()
 const [otpForm, showForm] = useState(true)
   const { state, dispatch } = useContext(UserContext);
-  const history = useHistory();
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
+  // const history = useHistory();
 //   const [otpform, setOtpform] = useState(true);
 
-  const changePass = async () => {
-    history.push('/user/changepassword')
-  }
 
   const sendotp = async () => {
     try {

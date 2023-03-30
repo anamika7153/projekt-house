@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
-import download from "downloadjs";
+// import download from "downloadjs";
 import { API_URL } from "../../utils/constants";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { UserContext } from "../../App";
-import axios from "axios";
+// import axios from "axios";
 
 function Home() {
   const [data, setData] = useState([]);

@@ -4,7 +4,7 @@ import Dropzone from "react-dropzone";
 // import { useDropzone } from "react-dropzone";
 import axios from "axios";
 import {API_URL} from './../../utils/constants'
-import { Form, Row, Col, Button, Container } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import M from "materialize-css";
 import { useParams } from "react-router-dom";
 

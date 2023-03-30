@@ -1,7 +1,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
-import { Form, Row, Col, Button, Container } from "react-bootstrap";
+import {  useHistory } from "react-router-dom";
+import { Form,  Button, Container } from "react-bootstrap";
 import axios from "axios";
 import M from "materialize-css";
 import Dropzone from "react-dropzone";
