@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import M from "materialize-css";
 import { UserContext } from "../../App";
+import { API_URL } from "../../utils/constants";
 
 function Login() {
   const { state, dispatch } = useContext(UserContext);
@@ -26,7 +27,7 @@ function Login() {
       });
       return;
     }
-    fetch("/signin", {
+    fetch(`${API_URL}/signin`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",

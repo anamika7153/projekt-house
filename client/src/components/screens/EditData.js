@@ -43,7 +43,7 @@ function EditPost() {
   },[])
 
   const loaddata = async() => {
-    const result = await axios.get('http://localhost:5000/edit/'+id)
+    const result = await axios.get(`${API_URL}/edit/` +id)
     setPostdata(result.data)
     console.log("result.data",result.data)
   }

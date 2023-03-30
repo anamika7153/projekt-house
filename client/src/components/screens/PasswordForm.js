@@ -5,6 +5,7 @@ import { Link, useHistory } from "react-router-dom";
 import M from "materialize-css";
 import { UserContext } from "../../App";
 import axios from "axios";
+import { API_URL } from "../../utils/constants";
 
 function PasswordForm(props) {
   const { state, dispatch } = useContext(UserContext);
@@ -72,7 +73,7 @@ function PasswordForm(props) {
         Object.assign(inputField, props)
         console.log('props',inputField,props)
         try {
-            let url = 'http://localhost:5000/user/changepassword'
+            let url = `${API_URL}/user/changepassword`
             let options = {
                 method: 'PUT',
                 url:url,

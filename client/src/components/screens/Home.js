@@ -170,7 +170,7 @@ function Home() {
                     <Link
                       to={
                         creator._id !== state._id
-                          ? `/profile/` + creator._id
+                          ? `${API_URL}/profile/` + creator._id
                           : "/profile"
                       }
                       className="btn-floating halfway-fab waves-effect waves-light red"

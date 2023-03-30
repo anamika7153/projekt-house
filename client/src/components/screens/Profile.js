@@ -3,6 +3,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../App";
 import { Link } from "react-router-dom";
+import { API_URL } from "../../utils/constants";
 
 function Profile() {
   const [data, setData] = useState([]);
@@ -17,7 +18,7 @@ function Profile() {
   const [secondterm, setSecondterm] = useState("second");
   const [thirdterm, setThirdterm] = useState("third");
   useEffect(() => {
-    fetch("/mypost", {
+    fetch(`${API_URL}/mypost`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
