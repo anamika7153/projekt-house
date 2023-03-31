@@ -12,7 +12,7 @@ const Otp = mongoose.model("Otp");
 
 const router = express.Router();
 
-router.get("/user/:id", requireLogin, (req, res) => {
+router.get("/user/:id", (req, res) => {
   User.findOne({ _id: req.params.id })
     .select("-password")
     .then((user) => {

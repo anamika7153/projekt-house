@@ -4,6 +4,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { UserContext } from "../../App";
 import { Link } from "react-router-dom";
+import { API_URL } from "../../utils/constants";
 
 function UserProfile() {
   const [userProfile, setUserProfile] = useState(null);
@@ -11,7 +12,7 @@ function UserProfile() {
   const { state, dispatch } = useContext(UserContext);
   const { userId } = useParams();
   useEffect(() => {
-    fetch(`/user/${userId}`, {
+    fetch(`${API_URL}/user/${userId}`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },

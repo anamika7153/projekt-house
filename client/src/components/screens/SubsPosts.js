@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../App";
+import { API_URL } from "../../utils/constants";
 
 function SubsPosts() {
   const [data, setData] = useState([]);
@@ -14,7 +15,7 @@ function SubsPosts() {
   const [secondterm, setSecondterm] = useState("second");
   const [thirdterm, setThirdterm] = useState("third");
   useEffect(() => {
-    fetch("/getSubPost", {
+    fetch(`${API_URL}/getSubPost`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },

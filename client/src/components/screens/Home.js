@@ -171,7 +171,7 @@ function Home() {
                       to={
                         creator._id !== state._id
                           ? `${API_URL}/profile/` + creator._id
-                          : "/profile"
+                          : `${API_URL}/profile`
                       }
                       className="btn-floating halfway-fab waves-effect waves-light red"
                     >
